@@ -1,0 +1,172 @@
+﻿<!DOCTYPE HTML>
+<html class="">
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content=""  data-variable="/,cn,10001,,10001,M1156014" />
+<title>{@SL_网站标题}</title>
+<meta name="description" content="{@SL_网站描述}" />
+<meta name="keywords" content="{@SL_网站关键字}" />
+<link rel='stylesheet' href='{@SL_安装目录}wap/w104/skin/css/index-font.css'>
+</head>
+<body>
+<!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+  <p class="browserupgrade font-size-18">
+	你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。
+  </p>
+</div>
+<![endif]-->
+<div class="load-box"></div>
+<header>
+  
+  {@SL_网站顶部}
+  <div class="container mobile-not-padding">
+    <div class="product-cut auto">
+      <div class="product-class has-banner index">
+        <ul class="product-class-wrapper">
+          
+
+
+          {$product_sort_list2(<li class="product-class-slide"><a href="%主分类链接%" title="%主分类标题%" >%主分类标题%</a><i class="fa fa-angle-right"></i></li>,,)}
+
+          
+        </ul>
+      </div>
+
+
+      {$product_sort_list2(<div class="product-content index">
+        <div class="product-list">%子分类%</div>
+      </div>,<a href="%子分类链接%" title="%子分类标题%"> <b data-original='{@SL_安装目录}%子分类图片%'></b>
+              <p>%子分类标题%</p>
+              </a>,<ul class="product-ul">
+            <li class="product-li"> %子分类样式%</li>
+          </ul>)}
+
+      <div class="met-banner banner-ny-h index" data-height='' style=''> 
+{$getwapslide(<a href="%幻灯链接%"><div class="slick-slide"> <img class="cover-image" src="{@SL_安装目录}%图片路径%" srcset='{@SL_安装目录}%图片路径%' sizes="(max-width: 767px) 767px"> </div></a>)}
+ </div>
+    </div>
+  </div>
+</header>
+<div class="groom-box">
+  <div class="container">
+    <div class="title-box">
+      <div class="title-name"> <h3>recommend commodities</h3> </div>
+      <div class="title-move"> <i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i> </div>
+    </div>
+    <div class="groom-cut">
+      <ul class="groom-cut-wraper">
+
+      	{$product_list2(,<li class="groom-cut-slide"> <a href="%产品链接%" title="%产品标题%"> <img data-original='{@SL_安装目录}%产品小图%' alt="%产品标题%"> <b>%产品标题%</b> <i>&nbsp;</i>
+          <p>￥%产品价格%</p>
+          </a> </li>,10,0)}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="grey-box">
+
+
+{#productp[<div class="host-box">
+    <div class="container">
+      <div class="host-title title-box">
+        <div class="title-name"> <h3>&j&F &产品分类标题&</h3> </div>
+        <div class="title-nav">
+          <ul>
+          	<li class="active"><a href="a/chanpinzhongxin/jianguochaohuo/index.html">Hot</a></li>
+            {$product_sort_list(<li><a href="%产品分类链接%" title="%产品分类标题%">%产品分类标题%</a></li>,&产品分类ID&)}
+          </ul>
+        </div>
+      </div>
+      <div class="host-cut tags">
+        <div class="host-adver ">
+          <ul>
+            <li> <a data-original="{@SL_安装目录}&产品分类图片&"> <img src="{@SL_安装目录}wap/w104/skin/images/null.png"/> </a> </li>
+            <li class="host-list-slide ">
+            	<a class="more" style="background:#ffffff;position:relative" href="&产品分类链接&">
+            		<img src="{@SL_安装目录}wap/w104/skin/images/null.png"/>
+
+            <span style="width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    padding-left: 24px;
+    margin-top: -24px;"> <b>浏览More</b>
+              <p>&产品分类标题&</p>
+              </span> 
+              <i class="wb-arrow-right" style="width: 50px;
+    height: 50px;
+    line-height: 40px;
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    margin-top: -25px;
+    border: 3px solid #f32196;
+    color: #f32196;
+    border-radius: 50%;
+    font-size: 25px;
+    text-align: center;"></i>
+
+
+</a>
+              </li>
+          </ul>
+        </div>
+
+
+<div class="host-list index active">
+          <ul class="host-list-wraper">
+
+{$product_list2(,<li class="host-list-slide "> <a href="%产品链接%" title="%产品标题%"> <img data-original='{@SL_安装目录}%产品小图%' alt="%产品标题%"> <span> <b>%产品标题%</b> <i>&nbsp;</i>
+              <p>￥%产品价格%</p>
+              </span> </a> </li>,0,&产品分类ID&)}
+
+          </ul>
+</div>
+
+
+
+{$product_listx(<div class="host-list index">
+          <ul class="host-list-wraper">
+%产品列表%
+          </ul>
+        </div>,<li class="host-list-slide "> <a href="%产品链接%" title="%产品标题%"> <img data-original='{@SL_安装目录}%产品图片%' alt="%产品标题%"> <span> <b>%产品标题%</b> <i>&nbsp;</i>
+              <p>￥%产品价格%</p>
+              </span> </a> </li>,0,&产品分类ID&)}
+
+
+      </div>
+    </div>
+  </div>
+
+//0]}
+
+
+  
+  <div class="info-box">
+    <div class="container">
+      <div class="title-box">
+        <div class="title-name"> <h3>News</h3> </div>
+        <div class="title-move"> <i class="fa fa-chevron-left"></i> <i class="fa fa-chevron-right"></i> </div>
+      </div>
+      <div class="info-cut index">
+      <ul class="info-cut-wraper">
+
+
+{$news_list2(,<li class="info-cut-slide"> <a href="%新闻链接%" title="%新闻标题%"> <img data-original='{@SL_安装目录}%新闻图片%' alt="%新闻标题%"> <span>
+          <p>%新闻简述%</p>
+          <i>发布日期<em>%发表时间%</em></i> <b>%新闻标题%</b> </span> </a> </li>,10,0,normal)}
+
+
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{@SL_网站底部}
+</body>
+</html>

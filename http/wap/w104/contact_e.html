@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<html class="  ">
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,186,186,1,M1156014" />
+<title>{@SL_联系标题}-{@SL_网站标题}</title>
+<meta name="keywords" content="{@SL_网站关键字}" />
+<meta name="description" content="{@SL_网站描述}" />
+<link rel='stylesheet' href='{@SL_安装目录}wap/w104/skin/css/index-font.css'>
+</head>
+<body>
+<!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+  <p class="browserupgrade font-size-18">
+	你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。
+  </p>
+</div>
+<![endif]-->
+<div class="load-box"></div>
+<header>
+{@SL_网站顶部}
+</header>
+<div class="column-side ">
+  <div class="container mobile-not-padding">
+    <div class="column-nav">
+      <ol class="column-ul">
+
+{$left_list(<li class="column-li" id="%左侧type%-%左侧typeID%"> <a href="%左侧链接%" title="%左侧标题%"  >%左侧标题%</a> </li>,{@SL_菜单ID})}
+
+        
+      </ol>
+    </div>
+    <div class="column-hover">
+      <ul class="">
+      </ul>
+      <ul class="">
+      </ul>
+      <ul class="">
+      </ul>
+    </div>
+  </div>
+</div>
+<section class="met-show animsition">
+  <div class="container">
+     <iframe src="{@SL_安装目录}mapload.asp?C_address={@SL_地图地址}&C_zb={@SL_地图坐标}" scrolling="no" name="mapif" type="1" frameborder="0" height="400" width="100%"></iframe>
+    <div class="met-editor lazyload clearfix">{@SL_联系方式}
+ </div>
+  </div>
+</section>
+<script>$('#contact-1').attr('class','active');</script>
+{@SL_网站底部}
+</body>
+</html>

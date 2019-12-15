@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE HTML>
+<html class="  ">
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,220,,3,M1156014" />
+<title>{@SL_产品分类标题}-{@SL_网站标题}</title>
+<meta name="keywords" content="{@SL_产品分类keywords}" />
+<meta name="description" content="{@SL_产品分类description}" />
+<link rel='stylesheet' href='{@SL_安装目录}wap/w104/skin/css/index-font.css'>
+</head>
+<body>
+<!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+  <p class="browserupgrade font-size-18">
+	你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。
+  </p>
+</div>
+<![endif]-->
+<div class="load-box"></div>
+<header>
+  {@SL_网站顶部}
+<div class="met-banner-ny vertical-align text-center" style=''>
+    <h1 class="vertical-align-middle" style='color:#ffffff;'>{@SL_产品分类标题}</h1>
+  </div>
+</header>
+<div class="column-side ">
+  <div class="container mobile-not-padding">
+    <div class="column-nav">
+      <ol class="column-ul">
+        <li class="column-li"> <a href="{@SL_安装目录}?type=product">全部商品</a> </li>
+
+{$product_sort_list2(<li class="column-li navs"> <a href="%主分类链接%" title="%主分类标题%" >%主分类标题%</a> </li>,,)}
+
+      </ol>
+    </div>
+    <div class="column-hover">
+      <ul>
+      </ul>
+
+      {$product_sort_list2(%子分类%,<li><a href="%子分类链接%" title="%子分类标题%" >%子分类标题%</a></li>,<ul class="has">%子分类样式%</ul>)}
+
+    </div>
+  </div>
+</div>
+<div class="grey-box">
+  <div class="container">
+    <div class="host-cut">
+      <div class="host-list active">
+        <ul class="blocks-2 blocks-sm-3 blocks-md-4 blocks-xlg-5  met-page-ajax met-grid" id="met-grid" data-scale='1'>
+
+
+          
+
+
+   {$product_list2(,<li class="shown"> <a href="%产品链接%" title="%产品标题%"> <img data-original='{@SL_安装目录}%产品小图%' alt="%产品标题%"> <span> <b>%产品标题%</b> <i>&nbsp;</i>
+            <p>￥%产品价格%</p>
+            </span> </a> </li>,10|{@SL_产品分类page},{@SL_产品分类ID}|{@SL_产品分类type})}
+            
+        </ul>
+        <div>
+
+
+
+
+
+        </div>
+      </div>
+      {$getpage2(product,{@SL_产品分类ID}|{@SL_产品分类type},10|{@SL_产品分类page})}
+    </div>
+  </div>
+</div>
+{@SL_网站底部}
+</body>
+</html>

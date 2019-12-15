@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE HTML>
+<html class="  ">
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,231,171,3,M1156014" />
+<title>{@SL_产品标题}-{@SL_产品分类标题}-{@SL_网站标题}</title>
+<link href="{@SL_安装目录}{@SL_网站ico}" rel="shortcut icon" />
+<meta name="keywords" content="{@SL_产品分类keywords}" />
+<meta name="description" content="{@SL_产品分类description}" />
+<link rel='stylesheet' href='{@SL_安装目录}template/s104/skin/css/index-font.css'>
+</head>
+<body>
+<!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+  <p class="browserupgrade font-size-18">
+	你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。
+  </p>
+</div>
+<![endif]-->
+<div class="load-box"></div>
+<header>
+  {@SL_网站顶部}
+<div class="met-banner-ny vertical-align text-center" style=''>
+    <h1 class="vertical-align-middle" style='color:#ffffff;'>{@SL_产品分类标题}</h1>
+  </div>
+</header>
+<div class="met-position  pattern-show">
+  <div class="container">
+    <div class="row">
+      <ol class="breadcrumb">
+        <li> <i class="icon wb-home" aria-hidden="true"></i><a href='{@SL_首页链接}'>Home</a> > <a href='{@SL_产品分类链接}'>{@SL_产品分类标题}</a> > <a href=''>{@SL_产品标题}</a> > </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="page met-showproduct pagetype1">
+  <div class="met-showproduct-head">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class='met-showproduct-list fngallery text-center slick-dotted' id="met-imgs-carousel">
+            {$pic_list(<div class="slick-slide lg-item-box" data-src="{@SL_安装目录}%友链图片%" data-exthumbimage="{@SL_安装目录}%产品图片%"> <span> <img src="{@SL_安装目录}%产品图片%" data-src="{@SL_安装目录}%产品图片%" class="img-responsive" alt="%产品标题%" height="210" width="380" title="%产品标题%"> 
+              </span> </div>,{@SL_产品ID})}
+          </div>
+        </div>
+        <div class="col-md-5 product-intro">
+          <h1 class='font-weight-300'>{@SL_产品标题}</h1>
+          <div class="shop-product-intro grey-500">
+            <div class="padding-20 bg-grey-100 price"> 
+              <div style="line-height:300%">
+             {@SL_产品购买}
+           </div>
+
+            </div>
+            <div class="form-group inline-block margin-top-30">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="met-showproduct-body">
+    <div class="container mobile-not-padding">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="product-content-body">
+            <div class="panel product-detail">
+              <div class="panel-body">
+                <ul class="nav nav-tabs nav-tabs-line met-showproduct-navtabs affix-nav">
+                  <li class="active"><a data-toggle="tab" href="#product-details" data-get="product-details">详细信息</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane met-editor lazyload clearfix active" id="product-details"> {@SL_产品内容} </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="panel product-hot">
+            <div class="panel-body">
+              <h2 class="margin-bottom-15 font-size-16 font-weight-300">热门推荐</h2>
+              <ul class="blocks-2 blocks-sm-3 blocks-md-100 blocks-xlg-100  mob-masonry" data-scale='1'>
+{$product_list2(,<li> <a href="%产品链接%" class="img" title="%产品标题%"> <img data-original='{@SL_安装目录}%产品小图%' class="cover-image" style='height:200px;' alt="%产品标题%"> </a> <a href="%产品链接%" class="txt" title="%产品标题%">%产品标题%</a>
+                  <p class='margin-bottom-0 red-600'>￥%产品价格%</p>
+                </li>,5,0)}
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{@SL_网站底部}
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<div class="mip-mnav">
+        <mip-sidebar id="left-sidebar" layout="nodisplay" side="left" class="mip-hidden">
+            <ul class="nav navbar-nav navbar-left">
+{$getmenu(<li><a href="%主菜单链接%" title="%主菜单标题%" data-type="mip">%主菜单标题%</a></li>,,)}
+</ul>
+        </mip-sidebar>
+    </div>
+    <mip-fixed type="top" class="mip-top-head">
+        <div class="mip-pcheader">
+            <div class="mip-center">
+                <div class="mip-text clearfix">
+                    <div class="mip-logo">
+                        <a href="{@SL_首页链接}" data-type="mip"><mip-img src="{@SL_安装目录}{@SL_网站logo}"></mip-img></a>
+                    </div>
+                    <div class="mip-mbtn">
+                        <span on="tap:left-sidebar.open"></span>
+                    </div>
+                    <div class="mip-nav">
+                        <mip-nav-slidedown data-id="bs-navbar" class="mip-element-sidebar container">
+                            <nav id="bs-navbar" class="navbar-collapse collapse navbar navbar-static-top">
+                                <ul class="nav navbar-nav navbar-right">
+{$getmenu(<li>
+                                            <a href="%主菜单链接%" title="%主菜单标题%" data-type="mip"><span class="navbar-more">%主菜单标题%</span></a>
+                                            %子菜单%
+                                        </li>,<li><a href="%子菜单链接%" title="%子菜单标题%" data-type="mip">%子菜单标题%</a></li>,<ul>
+%子菜单样式%
+</ul>)}
+</ul>
+                            </nav>
+                        </mip-nav-slidedown>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mip-fixed>

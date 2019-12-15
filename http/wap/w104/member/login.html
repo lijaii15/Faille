@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from demo6261.adashuo.com/member/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Feb 2018 06:04:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>响应式零食日化商品织梦商城模板(带自适应购物车)- 会员登录</title>
+<link href="templets/user/style_log.css" rel="stylesheet" type="text/css">
+<script src="templets/js/j.js" language="javascript" type="text/javascript"></script>
+<script type="text/javascript">
+function changeAuthCode() {
+	var num = 	new Date().getTime();
+	var rand = Math.round(Math.random() * 10000);
+	num = num + rand;
+	$('#ver_code').css('visibility','visible');
+	if ($("#vdimgck")[0]) {
+		$("#vdimgck")[0].src = "../include/vdimgck4e94.jpg?tag=" + num;
+	}
+	return false;
+}
+
+</script>
+</head>
+
+<body class="login" mycollectionplug="bind">
+<div class="login_m">
+<div class="login_logo"><img src="templets/user/logo.png" width="196" height="46"></div>
+<div class="login_boder">
+
+<div class="login_padding" id="login_model">
+<form name='form1' method='POST' action='http://demo6261.adashuo.com/member/index_do.php' class="bv-form">
+          <input type="hidden" name="fmdo" value="login">
+          <input type="hidden" name="dopost" value="login">
+          <input type="hidden" name="gourl" value="">
+  <h2>用户名</h2>
+  <label>
+    <input type="text" name="userid"  class="txt_input txt_input2" >
+  </label>
+  <h2>密&nbsp;&nbsp;码</h2>
+  <label>
+    <input type="password" name="pwd" id="userpwd" class="txt_input" onfocus="if (value ==&#39;******&#39;){value =&#39;&#39;}" onblur="if (value ==&#39;&#39;){value=&#39;******&#39;}" value="******">
+  </label>
+ 
+ 
+
+ 
+  <p class="forgot"></p>
+  <div class="rem_sub">
+  <div class="rem_sub_l">
+
+   <label for="checkbox"><a href="index_doa067.html?fmdo=user&amp;dopost=regnew">还没账号？点击注册</a></label>
+   </div>
+    <label>
+      <input type="submit" class="sub_button" name="button" id="button" value="登 录" style="opacity: 0.7;">
+    </label>
+    
+    <div style="clear:both;"></div>
+    
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--login_padding  Sign up end-->
+</div><!--login_boder end-->
+</div><!--login_m end-->
+
+
+
+
+
+</body>
+<!-- Mirrored from demo6261.adashuo.com/member/login.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 28 Feb 2018 06:04:49 GMT -->
+</html>

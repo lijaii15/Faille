@@ -1,0 +1,49 @@
+﻿<div class="container">
+  <div class="foot-service">
+    <ul class="foot-service-wraper">
+      <li class="foot-service-slide"><a  title="正品保证"><i class="fa fa-diamond"></i>正品保证</a></li>
+      <li class="foot-service-slide"><a  title="如实描述"><i class="fa fa-camera-retro"></i>如实描述</a></li>
+      <li class="foot-service-slide"><a  title="专业配送"><i class="fa fa-truck"></i>专业配送</a></li>
+      <li class="foot-service-slide"><a  title="金牌服务"><i class="fa fa-heart-o"></i>金牌服务</a></li>
+      <li class="foot-service-slide"><a  title="万千信赖"><i class="fa wb-gallery"></i>万千信赖</a></li>
+    </ul>
+  </div>
+  <div class="foot-content">
+    <div class="foot-nav">
+
+
+
+      <ul class="foot-nav-wraper">
+
+
+        {$getmenu(<li class="foot-nav-slide"> <b><a href="%主菜单链接%"  title="%主菜单标题%">%主菜单标题%</a></b>
+          %子菜单%
+        </li>,<li><a href="%子菜单链接%"  title="%子菜单标题%">%子菜单标题%</a></li>,<ol>%子菜单样式%</ol>)}
+
+
+        
+      </ul>
+    </div>
+    <div class="foot-text"> <b><a href="tel:{@SL_手机版电话}" title="{@SL_手机版电话}">{@SL_手机版电话}</a></b> <i>服务时间 9:00-22:00</i>
+      <p> <a id="met-weixin"><i class="fa fa-weixin light-green-700" data-plugin="webuiPopover" data-trigger="hover" data-animation="pop" data-placement='top' data-width='160' data-padding='0' data-content="<img src='{@SL_安装目录}{@SL_微信二维码}' style='width: 150px;height:150px;display:block;margin:auto;'>"></i></a> 
+        
+        <a href="{@SL_微博主页}" rel="nofollow" target="_blank"><i class="fa fa-weibo red-600"></i></a> </p>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="met-links">
+      <ol class="breadcrumb">
+        <li>友情链接 :</li>
+       
+        {$link_list(<li><a href='%友链网址%' target='_blank'>%友链网站%</a>  </li>,0)}
+        
+      </ol>
+    </div>
+    <p>
+    <p>{@SL_版权文字} {@SL_统计代码}</p>
+    </p>
+  </div>
+</footer>
+<button type="button" class="btn btn-icon btn-primary btn-squared met-scroll-top hide"><i class="icon wb-chevron-up" aria-hidden="true"></i></button>

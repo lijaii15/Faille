@@ -1,0 +1,93 @@
+﻿<script src="{@SL_安装目录}wap/w104/skin/js/shop_lang_cn.js"></script> 
+<script src="{@SL_安装目录}wap/w104/skin/js/index.js"></script>
+<script src="{@SL_安装目录}wap/w104/skin/js/shop_v3.js"></script>
+{@SL_在线客服}
+<link href="{@SL_安装目录}css/language-selector.css" rel="stylesheet" type="text/css" />
+<div id="lang_sel" style="right:20px;POSITION: fixed;top:7px;z-index:10000;">{@SL_语言按钮}</div>
+
+
+
+  <div class="head-box">
+    <div class="container">
+      <div class="head-left">
+        <div class="head-left-wrapper">
+          <div class="head-left-slide">
+            <p>欢迎来到{@SL_网站标题}</p>
+            <font>
+            <hr>
+            <a id="met-weixins"><i class="fa fa-weixin" data-plugin="webuiPopover" data-trigger="hover" data-animation="pop" data-placement='bottom' data-width='130' data-padding='0' data-content="<img src='{@SL_安装目录}{@SL_微信二维码}' alt='{@SL_网站标题}' style='width: 120px;display:block;margin:auto;'>"></i></a>
+            <hr>
+            
+            <a href="{@SL_微博主页}" rel="nofollow" target="_blank"><i class="fa fa-weibo"></i></a> </font> </div>
+
+            
+
+        </div>
+      </div>
+
+
+
+
+{$member(<div class="head-right">
+
+
+
+ <a class="login" href="%登录链接%">登录</a>
+        <hr>
+        <a class="login" href="%注册链接%">注册</a>
+        <li class="dropdown shopcut"> <a href="%购物车链接%"> <i class="icon wb-shopping-cart" aria-hidden="true"></i> <font>购物车</font> <span class="badge badge-danger up hide topcart-goodnum"></span> </a> </li>
+      </div>,<div class="head-right"> <a class="login" href="%会员中心%">%用户名%</a>
+        <hr>
+        <a class="login" href="%退出链接%">退出</a>
+        <li class="dropdown shopcut"> <a href="%购物车链接%"> <i class="icon wb-shopping-cart" aria-hidden="true"></i> <font>购物车</font> <span class="badge badge-danger up hide topcart-goodnum"></span> </a> </li>
+      </div>)}
+
+    </div>
+  </div>
+  <nav>
+    <div class="neck-box">
+      <div class="container">
+        <div class="logo-box"> <a href="{@SL_首页链接}" title="{@SL_网站标题}"> <img src="{@SL_安装目录}{@SL_手机版logo}" alt="{@SL_网站标题}"> <img src="{@SL_安装目录}{@SL_手机版logo}" alt="{@SL_网站标题}"> </a> </div>
+        <div class="search-box">
+          <div class="search-cut">
+            <p> 　
+
+ {$hotwords(<a href='{@SL_安装目录}search.asp?keyword=%搜索热词%&action=search'>%搜索热词%</a>)}
+
+  </p>
+            <form name="formsearch" action="{@SL_安装目录}search.asp?action=search" method="post">
+              <input type="text" name="keyword" value="">
+              <button class="fa fa-search" type="submit"></button>
+            </form>
+          </div>
+        </div>
+        <div class="nav-box index">
+          
+          <div class="nav-cut">
+            <ul class="nav-ul">
+
+            	{$getmenu(<li class="nav-li margin-left-0"><a href="%主菜单链接%" title="%主菜单标题%" >%主菜单标题%</a></li>,,)}
+
+              
+            </ul>
+          </div>
+          <div class="nav-hover">
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+            <ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

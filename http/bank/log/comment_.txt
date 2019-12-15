@@ -1,0 +1,28 @@
+$page=$_REQUEST["page"];
+if($C_psh==1){
+$sql="select count(C_id) as C_count from SL_comment where C_page='".$page."' and C_sh=1";
+}else{
+$sql="select count(C_id) as C_count from SL_comment where C_page='".$page."'";
+}
+
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+if (mysqli_num_rows($result) > 0) {
+$C_count=$row["C_count"];
+}
+if($C_count>0){
+$comment="<b>".lang("网友评论<font color='#ff9900'>".$C_count."</font>条/l/".$C_count." comments")."</b>".$comment.creat(0,0,$page)."<hr>";
+}else{
+$comment="<b>".lang("暂无评论，快来抢沙发吧！/l/No comment, grab the sofa！")."</b>".$comment.creat(0,0,$page)."<hr>";
+}
+
+if($_SESSION["M_id"]!=""){
+$comment=$comment."<p style=\"font-weight:bold;\">".lang("发表评论/l/Comment")."<p><p>".lang("当前登录/l/user")."：".getrs("select * from SL_member where M_id=".$_SESSION["M_id"],"M_login")." <a href=\"".$C_dir."member/member_login.php?action=unlogin\">[".lang("退出/l/Logout")."]</a></p><div class='comment_input_'><form id='comment_form'><div class='comment_textarea'><textarea name='comment' style='outline:none' spellcheck='false' placeholder='".lang("请在这里发表您的评论/l/Please give your comments here")."' id='comment_content'></textarea><input type='hidden' name='page' value='".$page."'/><input type='hidden' name='sub' id='sub' value='0'/></div><div class='reply_info'></div><button type='button' onclick='submitx()'>".lang("发布/l/Submit")."</button><div class='yzm'>".lang("验证码/l/Code")."：<input type='text' name='code' id='code'/> <img id='vcode' src='".$C_dir."conn/code_1.php' onclick='refresh1()'></div></form></div>";
+}else{
+$comment=$comment."<p style=\"font-weight:bold;\">".lang("发表评论/l/Comment")."<p><p>".lang("请登录帐号后发表评论/l/Please login and comment")." <a href=\"".$C_dir."member/member_login.php\">[".lang("登录/l/sign in")."]</a></p>";
+}
+$comment=$comment."<link rel='stylesheet' href='".$C_dir."css/comment.css' type='text/css'/>";
+$comment=str_Replace("\"","'",$comment);
+
+
+echo "\$(\"#comments_box\").html(\"".$comment."\");\$(\"[href='".$C_dir."member/member_login.php']\").attr(\"href\",\$(\"[href='".$C_dir."member/member_login.php']\").attr(\"href\")+\"?from=\"+encodeURIComponent(window.location.href));function reply(C_id){\$('#sub').val(C_id);\$('#comment_content').focus();\$('.reply_info').html('<b>".lang("回复给/l/Reply to")."</b> '+\$('#list_'+C_id+' .M_login').html()+'：'+\$('#list_'+C_id+' .C_content').html() + ' <a href=\"javascript:;\" onclick=\"cancel()\" class=\"reply\">[".lang("取消/l/quit")."]</a>');};function cancel(){\$('#sub').val(0);\$('.reply_info').html('');}function refresh1(){ var vcode=document.getElementById('vcode'); vcode.src ='".$C_dir."conn/code_1.php?nocache='+new Date().getTime();}function submitx(){\$.ajax({url: '".$C_dir."js/scms.php?action=submit',type: 'POST', data: \$('#comment_form').serialize(),success: function (msg) {if(msg.indexOf('success')>=0){\$('.reply_info').html('<font color=\"#009900\">'+msg.split('|')[1]+'</font>');\$('#code').val('');\$('#comment_content').val('');}else{\$('.reply_info').html('<font color=\"#ff9900\">'+msg.split('|')[1]+'</font>');}},error: function (msg) {console.log(msg);}});}";

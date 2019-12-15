@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web:
+    build: http
+    ports:
+     - "8080:80"
+    links:
+     - bd
+  bd:
+    build: bd

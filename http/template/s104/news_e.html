@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE HTML>
+<html class="  ">
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content="dede58.com"  data-variable="/,cn,270,,2,M1156014" />
+<title>{@SL_新闻分类标题}-{@SL_网站标题}</title>
+<link href="{@SL_安装目录}{@SL_网站ico}" rel="shortcut icon" />
+<meta name="keywords" content="{@SL_新闻分类keywords}" />
+<meta name="description" content="{@SL_新闻分类description}" />
+<link rel='stylesheet' href='{@SL_安装目录}template/s104/skin/css/index-font.css'>
+</head>
+<body>
+<!--[if lte IE 8]>
+<div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+  <p class="browserupgrade font-size-18">
+	你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。
+  </p>
+</div>
+<![endif]-->
+<div class="load-box"></div>
+<header>
+{@SL_网站顶部}
+<div class="met-banner-ny vertical-align text-center" style=''>
+    <h1 class="vertical-align-middle" style='color:#ffffff;'>{@SL_新闻分类标题}</h1>
+  </div>
+
+</header>
+<div class="column-side ">
+  <div class="container mobile-not-padding">
+    <div class="column-nav">
+      <ol class="column-ul">
+
+{$left_list(<li class="column-li" id="%左侧type%-%左侧typeID%"> <a href="%左侧链接%" title="%左侧标题%"  >%左侧标题%</a> </li>,{@SL_菜单ID})}
+
+        
+      </ol>
+    </div>
+    <div class="column-hover">
+      <ul class="">
+      </ul>
+      <ul class="">
+      </ul>
+      <ul class="">
+      </ul>
+    </div>
+  </div>
+</div>
+<section class="grey-box">
+  <div class="container">
+    <div class="info-cut">
+      <ul class="met-page-ajax" data-scale=''>
+
+         {$news_list2(,<li> <a href="%新闻链接%" title="%新闻标题%"> <img data-original='{@SL_安装目录}%新闻图片%' alt="%新闻标题%"> <span>
+          <p>%新闻简述%</p>
+          <i>发布日期<em>%发表时间%</em></i> <b>%新闻标题%</b> </span> </a> </li>,10|{@SL_新闻分类page},{@SL_新闻分类ID})}
+
+      </ul>
+
+    </div>
+    {$getpage2(news,{@SL_新闻分类ID},10|{@SL_新闻分类page})}
+
+  </div>
+</section>
+<script>$('#news-{@SL_新闻分类ID}').attr('class','active');</script>
+{@SL_网站底部}
+</body>
+</html>
